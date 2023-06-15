@@ -8,4 +8,3 @@ export const getMovieCast = async movieId => {
   const { data } = await axios.get(query);
   return data;
 };
-
