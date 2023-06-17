@@ -1,8 +1,14 @@
-.container {
-}
-
 .list {
+  max-width: 768px;
+  margin: 0 auto;
+  text-align: justify;
+  color: #5c5b43;
+  list-style: none;
 }
 
 .author {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #5c5b43;
 }
