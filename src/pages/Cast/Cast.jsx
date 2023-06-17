@@ -1,4 +1,4 @@
-import { getMovieCast } from '../../API/get-movie-cast';
+import { getMovieCast } from '../../API/get-movie-credits';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Loader from 'components/Loader/Loader';

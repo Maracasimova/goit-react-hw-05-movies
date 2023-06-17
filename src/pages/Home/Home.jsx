@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getTrendingMovies } from '../../API/get-trending-movies';
+import { getTrendingMovies } from '../../API/get-trending';
 import { useLocation } from 'react-router-dom';
 import styles from './Home.module.css';
 import MovieList from 'components/MoviesList/MoviesList.jsx';
