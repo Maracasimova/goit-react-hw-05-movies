@@ -82,16 +82,11 @@ export default function MovieDetails() {
             <p className={styles.movieOverview}>{`${movie.overview}`}</p>
 
             <div className={styles.additionalInfoBox}>
-              <Link
-                className={styles.castLink}
-                state={{ from }}
-                to="cast"
-                replace
-              >
+              <Link className={styles.link} state={{ from }} to="cast" replace>
                 Cast
               </Link>
               <Link
-                className={styles.reviewLink}
+                className={styles.link}
                 state={{ from }}
                 to="reviews"
                 replace

@@ -1,56 +1,120 @@
 .container {
+  padding-top: 100px;
 }
 
 .returnBtn {
+  width: 130px;
+  height: 40px;
+  color: #d6d2c7;
+  background-color: #d6d2c7;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 20px;
+  border: none;
 }
 
 .returnBtn:hover {
+  background-color: #d6d2c7;
+  color: #d6d2c7;
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
 }
 
 .movieDetails {
+  display: flex;
+  width: 768px;
+  margin: 0 auto;
+  gap: 20px;
+  padding: 15px;
+  background-color: #5c5b43;
+  color: #d6d2c7;
+  border-radius: 10px;
+  margin-bottom: 65px;
 }
 
 .img {
+  display: block;
+  max-width: 340px;
+  height: 510px;
+  border-radius: 5px;
 }
 
 .infoBox {
+  padding: 10px;
 }
 
 .movieTitle {
+  margin: 0;
+  text-shadow: 0 0 3px #d6d2c7;
 }
 
 .rating {
+  font-weight: 800;
+  color: #d6d2c7;
 }
 
 .voteRating {
+  font-weight: 400;
+  margin-left: 10px;
+  color: #d6d2c7;
 }
 
 .genreContainer {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 45px;
 }
 
 .genreTag {
+  margin: 0;
+  color: #d6d2c7;
 }
 
 .genreName {
+  margin: 0;
+  color: #dcdcdc;
 }
 
 .overviewTag {
+  color: #d6d2c7;
 }
 
 .movieOverview {
+  text-align: justify;
 }
 
 .additionalInfoBox {
+  display: flex;
 }
 
-.castLink {
+.link {
+  display: block;
+  width: 130px;
+  height: 20px;
+  color: #5c5b43;
+  background-color: #d6d2c7;
+  text-decoration: none;
+  margin-right: 20px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 6px;
+  margin-top: 7px;
+  cursor: pointer;
+  margin-left: 20px;
+  border: none;
 }
 
-.castLink:hover {
-}
-
-.reviewLink {
-}
-
-.reviewLink:hover {
+.link:hover {
+  background-color: #5c5b43;
+  color: #d6d2c7;
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
 }
