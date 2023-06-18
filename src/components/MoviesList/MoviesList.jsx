@@ -9,17 +9,8 @@ export default function MovieList({ movies, location }) {
       {movies.length > 0 &&
         movies.map(({ id, title, poster_path }) => (
           <li className={styles.list} key={id} id={id}>
-            <Link
-              className={styles.link}
-              to={{
-                pathname: `/movies/${id}`,
-                state: {
-                  from: {
-                    location,
-                  },
-                },
-              }}
-            >
+            <Link className={styles.link} to={`/movies/${id}`}
+              state={{ from: location }} >
               <img
                 className={styles.img}
                 src={
