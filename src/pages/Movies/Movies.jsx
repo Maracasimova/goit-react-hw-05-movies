@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useSearchParams, useNavigate } from 'react-router-dom';
+import { useSearchParams, useLocation } from 'react-router-dom';
 import { getSearchMovies } from '../../API/search-movies';
 import MoviesList from 'components/MoviesList/MoviesList.jsx';
 import SearchForm from 'components/SearchForm/SearchForm.jsx';
@@ -8,8 +8,8 @@ export default function Movies() {
   const [searchMovie, setSearchMovie] = useState('');
   const [movies, setMovies] = useState([]);
 
-  const [searchParams] = useSearchParams();
-  const history = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const location = useLocation();
 
   useEffect(() => {
     const searchString = searchParams.get('query');
@@ -25,19 +25,11 @@ export default function Movies() {
     }
   }, [searchParams]);
 
-  const handleSubmit = async () => {
-    if (searchMovie.trim()) {
-      const { results } = await getSearchMovies(searchMovie);
+  const handleSubmit = () => {
+    if (!searchMovie.trim()) return;
 
-      setMovies(results);
-      setSearchMovie('');
-
-      if (results.length === 0) {
-        window.alert('Sorry, we do not have such movie');
-      }
-
-      history({ search: `query=${searchMovie}` });
-    }
+    setSearchParams({ query: searchMovie });
+    setSearchMovie('');
   };
 
   return (
@@ -49,7 +41,7 @@ export default function Movies() {
           setSearchMovie={setSearchMovie}
         />
       </header>
-      <MoviesList movies={movies} />
+      <MoviesList movies={movies} location={location} />
     </>
   );
 }
